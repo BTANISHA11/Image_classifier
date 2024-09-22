@@ -30,6 +30,6 @@ Add --gpu to train using GPU if available:
 python train.py data_directory --gpu
 
 # For running predict.py
-ou can run the script with python predict.py /path/to/image checkpoint to predict the flower name and class probability for an image.
+One can run the script with python predict.py /path/to/image checkpoint to predict the flower name and class probability for an image.
 
 The Image classifier is built on google collab. It can be directly run on it after saving its copy to drive.

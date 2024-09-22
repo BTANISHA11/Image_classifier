@@ -1,3 +1,4 @@
+#Imports here
 import argparse
 import torch
 from torch import nn, optim
@@ -6,7 +7,7 @@ from torch.utils.data import DataLoader
 from collections import OrderedDict
 import os
 
-
+# Model Loading
 def load_model(arch, hidden_units):
     """Load the model based on architecture name and adjust the classifier."""
     if arch == "resnet18":
@@ -42,7 +43,7 @@ def load_model(arch, hidden_units):
 
     return model
 
-
+# Training Model
 def train(data_dir, save_dir, arch, learning_rate, hidden_units, epochs, gpu):
     """Train the neural network model."""
     device = torch.device("cuda" if gpu and torch.cuda.is_available() else "cpu")

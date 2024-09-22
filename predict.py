@@ -1,3 +1,4 @@
+#Inports here
 import argparse
 import json
 import torch
@@ -6,7 +7,7 @@ from torchvision import models, transforms
 from PIL import Image
 from collections import OrderedDict
 
-
+# Checkpoint Loading
 def load_checkpoint(checkpoint_path):
     """
     Load the model from a checkpoint file and reconstruct the architecture.
@@ -47,7 +48,7 @@ def process_image(image):
 
     return preprocess(image).unsqueeze(0)  # Add batch dimension
 
-
+#Image prediction of top 5 classes
 def predict(image_path, model, topk=5, gpu=False):
     """
     Predict the class of an image using a trained model.
